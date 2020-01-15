@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         tv2 = findViewById(R.id.text02);
         val1 = 0;
         val2 = 0;
+        STATE_SCORE_1 = "Team 1 Value";
+        STATE_SCORE_2 = "Team 2 Value";
         if (savedInstanceState != null) {
             val1 = savedInstanceState.getInt(STATE_SCORE_1);
             val2 = savedInstanceState.getInt(STATE_SCORE_2);
