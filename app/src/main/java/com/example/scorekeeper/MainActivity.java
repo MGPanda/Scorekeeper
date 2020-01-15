@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private String STATE_SCORE_1, STATE_SCORE_2;
+    private static String STATE_SCORE_1, STATE_SCORE_2;
     private int val1, val2;
     private TextView tv1, tv2;
 
@@ -54,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.night_mode:
                 int nm = AppCompatDelegate.getDefaultNightMode();
-                if (nm == AppCompatDelegate.MODE_NIGHT_NO) {
+                if (nm == AppCompatDelegate.MODE_NIGHT_YES) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 }
+                recreate();
         }
-        recreate();
         return true;
     }
 
@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main_menu, menu);
 //Change the label of the menu based on the state of the app
         int nightMode = AppCompatDelegate.getDefaultNightMode();
-        if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+        if(nightMode == AppCompatDelegate.MODE_NIGHT_YES){
             menu.findItem(R.id.night_mode).setTitle(R.string.day_mode);
-        } else {
+        } else{
             menu.findItem(R.id.night_mode).setTitle(R.string.night_mode);
         }
         return true;

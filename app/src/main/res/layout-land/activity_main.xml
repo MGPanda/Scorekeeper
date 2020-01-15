@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/title01"
+            style="@style/TeamText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/team_1"
+            android:textSize="50sp" />
+
+        <ImageButton
+            android:id="@+id/plus01"
+            style="@style/PlusButtons"
+            android:layout_below="@+id/title01"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="75sp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/text01"
+            style="@style/ScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/title01"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60sp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/plus01"
+            android:layout_toEndOf="@+id/minus01"
+            android:gravity="center"
+            android:text="@string/text"
+            android:textSize="50sp" />
+
+        <ImageButton
+            android:id="@+id/minus01"
+            style="@style/MinusButtons"
+            android:layout_below="@+id/title01"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="75sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/title02"
+            style="@style/TeamText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/team_2"
+            android:textSize="50sp" />
+
+        <ImageButton
+            android:id="@+id/plus02"
+            style="@style/PlusButtons"
+            android:layout_below="@+id/title02"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="75sp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/text02"
+            style="@style/ScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/title02"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60sp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/plus02"
+            android:layout_toEndOf="@+id/minus02"
+            android:gravity="center"
+            android:text="@string/text"
+            android:textSize="50sp" />
+
+        <ImageButton
+            android:id="@+id/minus02"
+            style="@style/MinusButtons"
+            android:layout_below="@+id/title02"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="75sp" />
+    </RelativeLayout>
+</LinearLayout>
